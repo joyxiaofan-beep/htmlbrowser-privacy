@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>隐私政策 — HTML浏览器 / Privacy Policy — HTML Browser</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", sans-serif;
+            line-height: 1.7;
+            color: #1a1a1a;
+            background: #fafaf7;
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 48px 24px;
+        }
+        h1 {
+            font-size: 28px;
+            margin-bottom: 8px;
+            color: #111;
+        }
+        h2 {
+            font-size: 20px;
+            margin-top: 40px;
+            margin-bottom: 12px;
+            color: #111;
+            padding-top: 12px;
+            border-top: 1px solid #eee;
+        }
+        h3 { font-size: 16px; margin-top: 20px; margin-bottom: 8px; }
+        p { margin-bottom: 12px; }
+        ul { margin: 12px 0 16px 24px; }
+        li { margin-bottom: 6px; }
+        .lang-switcher {
+            position: fixed;
+            top: 16px;
+            right: 16px;
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 999px;
+            padding: 6px 14px;
+            font-size: 13px;
+            cursor: pointer;
+            text-decoration: none;
+            color: #333;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        .meta {
+            color: #888;
+            font-size: 13px;
+            margin-bottom: 32px;
+        }
+        .highlight {
+            background: #f0f7ff;
+            border-left: 3px solid #0a84ff;
+            padding: 14px 18px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        .lang-section { display: none; }
+        .lang-section.active { display: block; }
+        .contact {
+            margin-top: 48px;
+            padding: 20px;
+            background: #fff;
+            border-radius: 12px;
+            border: 1px solid #eee;
+        }
+        @media (prefers-color-scheme: dark) {
+            body { background: #1a1a1a; color: #e5e5e5; }
+            h1, h2 { color: #fff; }
+            .highlight { background: #1a2a3a; border-color: #0a84ff; }
+            .contact { background: #262626; border-color: #3a3a3a; }
+            .lang-switcher { background: #262626; color: #e5e5e5; border-color: #3a3a3a; }
+            .meta { color: #aaa; }
+        }
+    </style>
+</head>
+<body>
+    <a href="#" class="lang-switcher" onclick="toggleLang(); return false;" id="langBtn">English</a>
+
+    <!-- 中文 -->
+    <section class="lang-section active" id="zh">
+        <h1>隐私政策</h1>
+        <p class="meta">HTML浏览器 (HTML Browser) · 最后更新：2026 年 4 月 21 日</p>
+
+        <div class="highlight">
+            <strong>一句话总结：我们不收集您的任何数据。</strong><br>
+            HTML浏览器是一款纯本地运行的 HTML 文件阅读器，所有文件存储在您的设备上，不上传至任何服务器。
+        </div>
+
+        <h2>1. 数据收集</h2>
+        <p><strong>我们不收集任何数据。</strong>具体而言：</p>
+        <ul>
+            <li>❌ 不收集任何个人信息（姓名、邮箱、电话、地址等）</li>
+            <li>❌ 不进行使用行为分析或追踪</li>
+            <li>❌ 不发送崩溃报告至外部服务器</li>
+            <li>❌ 不使用 Cookie 或网络追踪技术</li>
+            <li>❌ 不包含广告或广告标识符（IDFA）</li>
+            <li>❌ 不使用任何收集数据的第三方 SDK</li>
+            <li>❌ 不访问通讯录、相册、位置、麦克风、相机等系统权限</li>
+        </ul>
+
+        <h2>2. 数据存储</h2>
+        <ul>
+            <li>您导入的所有 HTML 文件均<strong>仅存储在您设备本地</strong>（App 沙盒内）</li>
+            <li>文件元数据（名称、导入时间、标签等）以 JSON 格式存储在本地</li>
+            <li>缩略图预览在本地生成和缓存</li>
+            <li>界面语言偏好、外观模式等设置存储在本地（UserDefaults）</li>
+            <li><strong>没有任何数据会传输至任何服务器</strong></li>
+        </ul>
+
+        <h2>3. 网络访问</h2>
+        <p>本应用程序本身<strong>不发起任何网络请求</strong>。</p>
+        <p>仅在以下情况下，您的设备可能产生网络流量：</p>
+        <ul>
+            <li>当您导入的 HTML 文件本身引用了外部资源（如 Google Fonts、CDN 托管的 JavaScript 库）时，WKWebView 会加载这些资源</li>
+            <li>这些网络请求由 HTML 内容本身发起，而非应用程序</li>
+            <li>App 已内置 9 个主流 JavaScript/CSS 库（Chart.js、ECharts 等），优先使用本地版本，减少联网需求</li>
+        </ul>
+
+        <h2>4. 文件访问</h2>
+        <ul>
+            <li>应用仅访问您<strong>明确导入</strong>的文件</li>
+            <li>导入的文件会被复制到 App 的私有存储区</li>
+            <li>App 无法访问沙盒外的任何文件</li>
+            <li>App 不访问您的 iCloud Drive、照片、联系人等</li>
+        </ul>
+
+        <h2>5. 第三方服务</h2>
+        <p>本应用<strong>不使用</strong>任何第三方服务、分析工具或 SDK。</p>
+        <p>唯一与苹果交互的部分是：</p>
+        <ul>
+            <li><strong>Apple StoreKit</strong>：用于处理 App 内自愿打赏（如果您选择使用）。该功能由 Apple 管理，受 Apple 隐私政策约束。</li>
+        </ul>
+
+        <h2>6. App 内购买</h2>
+        <p>App 提供 4 档自愿打赏商品，用于支持开发者。</p>
+        <ul>
+            <li>所有购买通过 Apple StoreKit 处理</li>
+            <li>App 本地仅记录您的打赏总次数（一个计数器），不关联任何身份信息</li>
+            <li>该计数仅用于 App 内显示"感谢您的 N 次支持"，不上传任何服务器</li>
+            <li>所有 App 功能完全免费，打赏不解锁任何功能</li>
+        </ul>
+
+        <h2>7. 儿童隐私</h2>
+        <p>本应用不向任何人收集数据，包括 13 岁以下儿童。本应用年龄评级为 4+。</p>
+
+        <h2>8. 政策变更</h2>
+        <p>如本政策有任何更新，我们将在本页面发布最新版本，并更新顶部的"最后更新"日期。重大变更将在 App 内通过更新说明告知。</p>
+
+        <h2>9. 联系方式</h2>
+        <div class="contact">
+            <p>如对本隐私政策有任何疑问或建议，请联系：</p>
+            <p>📧 邮箱：<a href="mailto:xfzhangg@gmail.com">xfzhangg@gmail.com</a></p>
+        </div>
+    </section>
+
+    <!-- English -->
+    <section class="lang-section" id="en">
+        <h1>Privacy Policy</h1>
+        <p class="meta">HTML Browser · Last Updated: April 21, 2026</p>
+
+        <div class="highlight">
+            <strong>In one sentence: We do not collect any of your data.</strong><br>
+            HTML Browser is a local-only HTML file viewer. All files are stored on your device and never uploaded to any server.
+        </div>
+
+        <h2>1. Data Collection</h2>
+        <p><strong>We do not collect any data.</strong> Specifically:</p>
+        <ul>
+            <li>❌ No personal information collected (name, email, phone, address, etc.)</li>
+            <li>❌ No usage analytics or tracking</li>
+            <li>❌ No crash reports sent to external servers</li>
+            <li>❌ No cookies or web tracking technology</li>
+            <li>❌ No advertising or IDFA</li>
+            <li>❌ No third-party SDKs that collect data</li>
+            <li>❌ No access to Contacts, Photos, Location, Microphone, Camera, etc.</li>
+        </ul>
+
+        <h2>2. Data Storage</h2>
+        <ul>
+            <li>All HTML files you import are stored <strong>only on your device</strong> (inside the app's sandbox)</li>
+            <li>File metadata (names, import dates, tags) is stored locally in JSON format</li>
+            <li>Thumbnail previews are generated and cached locally</li>
+            <li>UI language preference, appearance mode, and other settings are stored locally (UserDefaults)</li>
+            <li><strong>No data is ever transmitted to any server</strong></li>
+        </ul>
+
+        <h2>3. Network Access</h2>
+        <p>The app itself makes <strong>zero network requests</strong>.</p>
+        <p>Network traffic only occurs when:</p>
+        <ul>
+            <li>HTML files you import reference external resources (Google Fonts, CDN-hosted JavaScript libraries), in which case WKWebView loads them</li>
+            <li>These requests are made by the HTML content itself, not by the app</li>
+            <li>9 popular JavaScript/CSS libraries (Chart.js, ECharts, etc.) are pre-bundled locally to reduce the need for network access</li>
+        </ul>
+
+        <h2>4. File Access</h2>
+        <ul>
+            <li>The app only accesses files you <strong>explicitly import</strong></li>
+            <li>Imported files are copied to the app's private storage</li>
+            <li>The app cannot access any files outside its sandbox</li>
+            <li>The app does not access iCloud Drive, Photos, Contacts, etc.</li>
+        </ul>
+
+        <h2>5. Third-Party Services</h2>
+        <p>The app uses <strong>no</strong> third-party services, analytics, or SDKs.</p>
+        <p>The only interaction with Apple is:</p>
+        <ul>
+            <li><strong>Apple StoreKit</strong>: For processing optional in-app tips (if you choose to use them). This is managed by Apple and governed by Apple's privacy policy.</li>
+        </ul>
+
+        <h2>6. In-App Purchases</h2>
+        <p>The app offers 4 tiers of optional tips to support the developer.</p>
+        <ul>
+            <li>All purchases are processed through Apple StoreKit</li>
+            <li>The app only locally records your total tip count (a simple counter), not linked to any identity</li>
+            <li>This counter is only used to display "Thank you for your N tips" inside the app and is not uploaded anywhere</li>
+            <li>All app features are completely free; tips do not unlock any features</li>
+        </ul>
+
+        <h2>7. Children's Privacy</h2>
+        <p>The app does not collect data from anyone, including children under 13. The app is rated 4+.</p>
+
+        <h2>8. Policy Changes</h2>
+        <p>If this policy is updated, we will publish the new version on this page and update the "Last Updated" date at the top. Major changes will be announced via the app's release notes.</p>
+
+        <h2>9. Contact</h2>
+        <div class="contact">
+            <p>For questions or feedback about this privacy policy, please contact:</p>
+            <p>📧 Email: <a href="mailto:xfzhangg@gmail.com">xfzhangg@gmail.com</a></p>
+        </div>
+    </section>
+
+    <script>
+        function toggleLang() {
+            const zh = document.getElementById('zh');
+            const en = document.getElementById('en');
+            const btn = document.getElementById('langBtn');
+            if (zh.classList.contains('active')) {
+                zh.classList.remove('active');
+                en.classList.add('active');
+                btn.textContent = '中文';
+                document.documentElement.lang = 'en';
+            } else {
+                en.classList.remove('active');
+                zh.classList.add('active');
+                btn.textContent = 'English';
+                document.documentElement.lang = 'zh-CN';
+            }
+        }
+
+        // 根据浏览器语言自动切换
+        if (navigator.language && !navigator.language.startsWith('zh')) {
+            toggleLang();
+        }
+    </script>
+</body>
+</html>
